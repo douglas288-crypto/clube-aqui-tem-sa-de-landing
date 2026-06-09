@@ -312,42 +312,91 @@ function Pricing() {
 
   return (
     <section id="adquirir" className="mx-auto max-w-6xl px-4 py-20">
-      <SectionHeader eyebrow="Plano único" title="Saúde acessível, do seu jeito" />
-      <div className="mx-auto mt-12 max-w-4xl overflow-hidden rounded-3xl border border-border bg-card shadow-card">
-        <div className="grid md:grid-cols-5">
-          <div className="bg-gradient-primary p-8 text-primary-foreground md:col-span-2 md:p-10">
-            <p className="text-sm font-semibold uppercase tracking-wider opacity-80">Clube Aqui Tem Saúde</p>
-            <div className="mt-6 flex items-baseline gap-1">
+      <SectionHeader
+        eyebrow="Planos Clube Aqui Tem Saúde"
+        title="Escolha o plano ideal para você"
+        desc="Dois planos simples, sem carência e sem fidelidade. Cancele quando quiser."
+      />
+      <div className="mx-auto mt-12 grid max-w-5xl gap-6 md:grid-cols-2">
+        {/* Plano Individual */}
+        <div className="flex flex-col overflow-hidden rounded-3xl border border-border bg-card shadow-card">
+          <div className="border-b border-border p-8">
+            <p className="text-xs font-bold uppercase tracking-widest text-primary">Plano Individual</p>
+            <p className="mt-1 text-sm text-muted-foreground">Apenas para o titular</p>
+            <div className="mt-6 flex items-baseline gap-1 text-primary-dark">
               <span className="text-2xl font-semibold">R$</span>
               <span className="text-6xl font-bold tracking-tight">29</span>
               <span className="text-3xl font-bold">,90</span>
+              <span className="ml-2 text-sm text-muted-foreground">/mês</span>
             </div>
-            <p className="mt-1 text-sm opacity-80">por titular / mês</p>
-            <div className="mt-8 rounded-2xl bg-white/10 p-4 backdrop-blur">
-              <p className="text-sm">
-                <span className="font-bold">Família de 4 pessoas</span> com 2 titulares por apenas
-              </p>
-              <p className="mt-1 text-2xl font-bold">R$ 59,80/mês</p>
-              <p className="text-xs opacity-80">≈ R$ 14,95 por pessoa</p>
-            </div>
+            <p className="mt-1 text-sm font-semibold text-accent">Somente o titular</p>
+          </div>
+          <div className="flex-1 p-8">
+            <ul className="space-y-3 text-sm">
+              {[
+                "Clínico geral + 11 especialidades",
+                "Consultas ilimitadas por vídeo ou telefone",
+                "Atendimento 24h, todos os dias",
+                "Prescrição e atestados digitais válidos",
+                "Sem carência e sem fidelidade",
+              ].map((i) => (
+                <li key={i} className="flex items-start gap-3">
+                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+                  <span>{i}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="p-8 pt-0">
             <a
               href="#"
-              className="mt-8 inline-flex w-full items-center justify-center rounded-full bg-accent px-6 py-4 text-base font-bold text-accent-foreground shadow-accent transition hover:brightness-110"
+              className="inline-flex w-full items-center justify-center rounded-full border-2 border-primary bg-card px-6 py-4 text-base font-bold text-primary transition hover:bg-primary hover:text-primary-foreground"
             >
-              Adquirir o Clube
+              Adquirir Plano Individual
             </a>
-            <p className="mt-3 text-center text-xs opacity-80">Pagamento recorrente no cartão</p>
           </div>
-          <div className="p-8 md:col-span-3 md:p-10">
-            <h3 className="text-lg font-bold text-primary-dark">O que está incluso</h3>
-            <ul className="mt-5 space-y-3">
-              {includes.map((i) => (
-                <li key={i} className="flex items-start gap-3 text-sm text-foreground">
+        </div>
+
+        {/* Plano Família */}
+        <div className="relative flex flex-col overflow-hidden rounded-3xl border-2 border-accent bg-gradient-primary text-primary-foreground shadow-card">
+          <span className="absolute right-6 top-6 rounded-full bg-accent px-3 py-1 text-xs font-bold uppercase tracking-wider text-accent-foreground shadow-accent">
+            Mais escolhido
+          </span>
+          <div className="border-b border-white/15 p-8">
+            <p className="text-xs font-bold uppercase tracking-widest opacity-90">Plano Família</p>
+            <p className="mt-1 text-sm opacity-80">2 titulares + até 2 dependentes</p>
+            <div className="mt-6 flex items-baseline gap-1">
+              <span className="text-2xl font-semibold">R$</span>
+              <span className="text-6xl font-bold tracking-tight">59</span>
+              <span className="text-3xl font-bold">,80</span>
+              <span className="ml-2 text-sm opacity-80">/mês</span>
+            </div>
+            <p className="mt-1 text-sm font-semibold text-accent">≈ R$ 14,95 por pessoa</p>
+          </div>
+          <div className="flex-1 p-8">
+            <ul className="space-y-3 text-sm">
+              {[
+                "Tudo do Plano Individual para 2 titulares",
+                "Até 2 dependentes inclusos (clínico geral)",
+                "Cobertura para até 4 pessoas da família",
+                "Atendimento 24h para toda a família",
+                "Sem carência e sem fidelidade",
+              ].map((i) => (
+                <li key={i} className="flex items-start gap-3">
                   <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-accent" />
                   <span>{i}</span>
                 </li>
               ))}
             </ul>
+          </div>
+          <div className="p-8 pt-0">
+            <a
+              href="#"
+              className="inline-flex w-full items-center justify-center rounded-full bg-accent px-6 py-4 text-base font-bold text-accent-foreground shadow-accent transition hover:brightness-110"
+            >
+              Adquirir Plano Família
+            </a>
+            <p className="mt-3 text-center text-xs opacity-80">Pagamento recorrente no cartão</p>
           </div>
         </div>
       </div>
@@ -499,10 +548,11 @@ function FinalCTA() {
             Comece a cuidar da sua saúde hoje mesmo
           </h2>
           <p className="mx-auto mt-3 max-w-xl opacity-90">
-            Por apenas R$ 29,90 por mês, você e sua família têm um médico sempre por perto.
+            <strong>Plano Individual</strong> por R$ 29,90/mês (apenas titular) ou{" "}
+            <strong>Plano Família</strong> por R$ 59,80/mês para até 4 pessoas.
           </p>
           <a
-            href="#"
+            href="#adquirir"
             className="mt-8 inline-flex items-center justify-center rounded-full bg-accent px-8 py-4 text-base font-bold text-accent-foreground shadow-glow transition hover:scale-[1.02] hover:brightness-110"
           >
             Adquirir o Clube agora
@@ -535,7 +585,7 @@ function Footer() {
             © {new Date().getFullYear()} Clube Aqui Tem Saúde · Em parceria com Porto Seguro e Horizon Corretora de Seguros.
           </p>
           <p className="mt-1">
-            Serviço de telemedicina operado pela Porto Seguro VidaClass conforme regulamentação do CFM.
+            Serviço de telemedicina operado pela Porto Seguro, em parceria com a Horizon Corretora de Seguros, conforme regulamentação do CFM.
           </p>
         </div>
       </div>
