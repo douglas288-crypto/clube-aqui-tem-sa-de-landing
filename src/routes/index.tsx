@@ -486,7 +486,7 @@ function FamilyExample() {
 const faqs = [
   {
     q: "O atendimento é com médicos de verdade?",
-    a: "Sim. Todas as consultas são realizadas por médicos formados e registrados no CRM, através da plataforma Porto Seguro VidaClass.",
+    a: "Sim. Todas as consultas são realizadas por médicos formados e registrados no CRM, através da plataforma de telemedicina da Porto Seguro.",
   },
   {
     q: "Tem carência para começar a usar?",
