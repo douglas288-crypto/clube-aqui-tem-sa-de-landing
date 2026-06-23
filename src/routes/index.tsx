@@ -17,6 +17,10 @@ import {
   CheckCircle2,
   Pill,
   UserRound,
+  Gift,
+  Ticket,
+  Store,
+  Tag,
 } from "lucide-react";
 
 import logoAsset from "@/assets/logo.png.asset.json";
