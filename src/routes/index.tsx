@@ -184,7 +184,7 @@ function Hero() {
             </a>
           </div>
           <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-muted-foreground">
-            {["Sem carência", "Cancele quando quiser", "Atendimento 24h"].map((t) => (
+            {["Carência de 30 dias", "Cancele quando quiser", "Atendimento 24h"].map((t) => (
               <div key={t} className="flex items-center gap-2">
                 <CheckCircle2 className="h-4 w-4 text-primary" /> {t}
               </div>
