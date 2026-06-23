@@ -215,8 +215,8 @@ function Hero() {
             </div>
           </div>
           <div className="absolute -top-4 right-4 hidden rounded-2xl bg-primary p-4 text-primary-foreground shadow-card md:block">
-            <p className="text-xs opacity-80">Cobertura familiar</p>
-            <p className="text-lg font-bold">Até 4 pessoas</p>
+            <p className="text-xs opacity-80">A partir de</p>
+            <p className="text-lg font-bold">R$ 29,90/mês</p>
           </div>
         </div>
       </div>
