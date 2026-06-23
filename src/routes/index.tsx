@@ -308,6 +308,56 @@ function Specialties() {
   );
 }
 
+function BonusVantagens() {
+  const perks = [
+    { icon: Ticket, title: "Cupons exclusivos", desc: "Descontos especiais em farmácias, restaurantes, academias e mais." },
+    { icon: Store, title: "Comércio local", desc: "Vantagens em lojas e serviços parceiros da sua cidade." },
+    { icon: Tag, title: "Ofertas o ano todo", desc: "Novas promoções todos os meses, direto no seu app." },
+  ];
+  return (
+    <section className="px-4 py-20">
+      <div className="relative mx-auto max-w-6xl overflow-hidden rounded-3xl border-2 border-accent/30 bg-gradient-to-br from-accent/10 via-card to-primary/10 p-8 shadow-card sm:p-12">
+        <div className="absolute -right-16 -top-16 h-56 w-56 rounded-full bg-accent/20 blur-3xl" />
+        <div className="absolute -bottom-16 -left-16 h-56 w-56 rounded-full bg-primary/20 blur-3xl" />
+        <div className="relative grid items-center gap-10 md:grid-cols-[1fr_1.2fr]">
+          <div>
+            <span className="inline-flex items-center gap-2 rounded-full bg-accent px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-accent-foreground shadow-accent">
+              <Gift className="h-3.5 w-3.5" /> Bônus exclusivo
+            </span>
+            <h2 className="mt-4 text-3xl font-bold text-balance text-primary-dark sm:text-4xl">
+              Clube Aqui Tem <span className="text-accent">Vantagens</span>
+            </h2>
+            <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
+              Como associado do Clube Aqui Tem Saúde, você ganha acesso a um clube de descontos
+              com <strong className="text-primary-dark">cupons no comércio local</strong> — economize todos os meses
+              em lojas, serviços e estabelecimentos parceiros da sua região.
+            </p>
+            <p className="mt-3 text-sm font-semibold text-accent">
+              Incluso sem custo adicional na sua assinatura.
+            </p>
+          </div>
+          <div className="grid gap-4 sm:grid-cols-2">
+            {perks.map((p) => (
+              <div key={p.title} className="rounded-2xl border border-border bg-card p-5 shadow-soft">
+                <div className="inline-flex rounded-xl bg-accent/10 p-2.5 text-accent">
+                  <p.icon className="h-5 w-5" />
+                </div>
+                <h3 className="mt-3 text-base font-bold text-primary-dark">{p.title}</h3>
+                <p className="mt-1 text-sm text-muted-foreground">{p.desc}</p>
+              </div>
+            ))}
+            <div className="rounded-2xl bg-gradient-primary p-5 text-primary-foreground shadow-card">
+              <p className="text-xs font-bold uppercase tracking-widest opacity-90">Bônus</p>
+              <p className="mt-1 text-lg font-bold">2 em 1: saúde + economia</p>
+              <p className="mt-1 text-xs opacity-80">Tudo por R$ 29,90/mês</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function Pricing() {
   return (
     <section id="adquirir" className="mx-auto max-w-6xl px-4 py-20">
