@@ -3,7 +3,7 @@ import {
   Stethoscope,
   Video,
   Phone,
-  Users,
+  
   ShieldCheck,
   Clock,
   CreditCard,
