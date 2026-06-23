@@ -304,88 +304,39 @@ function Specialties() {
 }
 
 function Pricing() {
-  const includes = [
-    "Consultas ilimitadas por vídeo ou telefone",
-    "Clínico geral + 11 especialidades médicas",
-    "Atendimento 24 horas, todos os dias",
-    "Até 2 dependentes inclusos (clínico geral)",
-    "Prescrição e atestados digitais válidos",
-    "Plataforma de telemedicina Porto Seguro",
-    "Carência de apenas 30 dias e sem fidelidade",
-    "Cancele quando quiser, direto pelo app",
-  ];
-
   return (
     <section id="adquirir" className="mx-auto max-w-6xl px-4 py-20">
       <SectionHeader
-        eyebrow="Planos Clube Aqui Tem Saúde"
-        title="Escolha o plano ideal para você"
-        desc="Dois planos simples, com carência de apenas 30 dias e sem fidelidade. Cancele quando quiser."
+        eyebrow="Plano Clube Aqui Tem Saúde"
+        title="Um plano simples, com tudo incluso"
+        desc="Carência de apenas 30 dias, sem fidelidade. Cancele quando quiser."
       />
-      <div className="mx-auto mt-12 grid max-w-5xl gap-6 md:grid-cols-2">
-        {/* Plano Individual */}
-        <div className="flex flex-col overflow-hidden rounded-3xl border border-border bg-card shadow-card">
-          <div className="border-b border-border p-8">
-            <p className="text-xs font-bold uppercase tracking-widest text-primary">Plano Individual</p>
-            <p className="mt-1 text-sm text-muted-foreground">Apenas para o titular</p>
-            <div className="mt-6 flex items-baseline gap-1 text-primary-dark">
+      <div className="mx-auto mt-12 max-w-md">
+        <div className="relative flex flex-col overflow-hidden rounded-3xl border-2 border-accent bg-gradient-primary text-primary-foreground shadow-card">
+          <span className="absolute right-6 top-6 rounded-full bg-accent px-3 py-1 text-xs font-bold uppercase tracking-wider text-accent-foreground shadow-accent">
+            Plano Individual
+          </span>
+          <div className="border-b border-white/15 p-8">
+            <p className="text-xs font-bold uppercase tracking-widest opacity-90">Titular</p>
+            <p className="mt-1 text-sm opacity-80">Acesso completo para você</p>
+            <div className="mt-6 flex items-baseline gap-1">
               <span className="text-2xl font-semibold">R$</span>
               <span className="text-6xl font-bold tracking-tight">29</span>
               <span className="text-3xl font-bold">,90</span>
-              <span className="ml-2 text-sm text-muted-foreground">/mês</span>
+              <span className="ml-2 text-sm opacity-80">/mês</span>
             </div>
-            <p className="mt-1 text-sm font-semibold text-accent">Somente o titular</p>
+            <p className="mt-1 text-sm font-semibold text-accent">Cobrança mensal no cartão</p>
           </div>
           <div className="flex-1 p-8">
             <ul className="space-y-3 text-sm">
               {[
-                "Clínico geral + 11 especialidades",
+                "Clínico geral + 11 especialidades médicas",
                 "Consultas ilimitadas por vídeo ou telefone",
                 "Atendimento 24h, todos os dias",
                 "Prescrição e atestados digitais válidos",
+                "Plataforma de telemedicina Porto Seguro",
                 "Carência de apenas 30 dias",
-              ].map((i) => (
-                <li key={i} className="flex items-start gap-3">
-                  <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
-                  <span>{i}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="p-8 pt-0">
-            <a
-              href="#"
-              className="inline-flex w-full items-center justify-center rounded-full border-2 border-primary bg-card px-6 py-4 text-base font-bold text-primary transition hover:bg-primary hover:text-primary-foreground"
-            >
-              Adquirir Plano Individual
-            </a>
-          </div>
-        </div>
-
-        {/* Plano Família */}
-        <div className="relative flex flex-col overflow-hidden rounded-3xl border-2 border-accent bg-gradient-primary text-primary-foreground shadow-card">
-          <span className="absolute right-6 top-6 rounded-full bg-accent px-3 py-1 text-xs font-bold uppercase tracking-wider text-accent-foreground shadow-accent">
-            Mais escolhido
-          </span>
-          <div className="border-b border-white/15 p-8">
-            <p className="text-xs font-bold uppercase tracking-widest opacity-90">Plano Família</p>
-            <p className="mt-1 text-sm opacity-80">2 titulares + até 2 dependentes</p>
-            <div className="mt-6 flex items-baseline gap-1">
-              <span className="text-2xl font-semibold">R$</span>
-              <span className="text-6xl font-bold tracking-tight">59</span>
-              <span className="text-3xl font-bold">,80</span>
-              <span className="ml-2 text-sm opacity-80">/mês</span>
-            </div>
-            <p className="mt-1 text-sm font-semibold text-accent">≈ R$ 14,95 por pessoa</p>
-          </div>
-          <div className="flex-1 p-8">
-            <ul className="space-y-3 text-sm">
-              {[
-                "Tudo do Plano Individual para 2 titulares",
-                "Até 2 dependentes inclusos (clínico geral)",
-                "Cobertura para até 4 pessoas da família",
-                "Atendimento 24h para toda a família",
-                "Carência de apenas 30 dias",
+                "Sem fidelidade — cancele quando quiser",
               ].map((i) => (
                 <li key={i} className="flex items-start gap-3">
                   <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-accent" />
@@ -399,7 +350,7 @@ function Pricing() {
               href="#"
               className="inline-flex w-full items-center justify-center rounded-full bg-accent px-6 py-4 text-base font-bold text-accent-foreground shadow-accent transition hover:brightness-110"
             >
-              Adquirir Plano Família
+              Adquirir o Clube
             </a>
             <p className="mt-3 text-center text-xs opacity-80">Pagamento recorrente no cartão</p>
           </div>
