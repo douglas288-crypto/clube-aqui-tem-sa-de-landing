@@ -390,7 +390,7 @@ const faqs = [
   },
   {
     q: "Qual é o prazo de carência?",
-    a: "A carência é de apenas 30 dias a partir da confirmação do pagamento. Após esse período, você e seus dependentes têm acesso liberado a todas as consultas e especialidades.",
+    a: "A carência é de apenas 30 dias a partir da confirmação do pagamento. Após esse período, seu acesso é liberado a todas as consultas e especialidades.",
   },
   {
     q: "As receitas e atestados são válidos?",
