@@ -78,8 +78,8 @@ const benefits = [
   },
   {
     icon: ShieldCheck,
-    title: "Sem carência",
-    desc: "Comece a usar logo após a assinatura. Nada de meses esperando para se cuidar.",
+    title: "Carência de apenas 30 dias",
+    desc: "Após 30 dias da assinatura, seu acesso completo está liberado para você cuidar da saúde de toda a família.",
   },
   {
     icon: CreditCard,
