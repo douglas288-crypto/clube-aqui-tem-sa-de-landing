@@ -207,7 +207,7 @@ function Hero() {
             height={1024}
             className="rounded-3xl shadow-card"
           />
-          <div className="absolute -bottom-6 -left-6 hidden rounded-2xl bg-card p-4 shadow-card sm:flex sm:items-center sm:gap-3">
+          <div className="float-soft absolute -bottom-6 -left-6 hidden rounded-2xl bg-card p-4 shadow-card sm:flex sm:items-center sm:gap-3">
             <div className="rounded-xl bg-accent/10 p-2.5">
               <Stethoscope className="h-6 w-6 text-accent" />
             </div>
@@ -216,7 +216,7 @@ function Hero() {
               <p className="text-lg font-bold text-primary-dark">Ilimitadas</p>
             </div>
           </div>
-          <div className="absolute -top-4 right-4 hidden rounded-2xl bg-primary p-4 text-primary-foreground shadow-card md:block">
+          <div className="float-slow absolute -top-4 right-4 hidden rounded-2xl bg-primary p-4 text-primary-foreground shadow-card md:block">
             <p className="text-xs opacity-80">A partir de</p>
             <p className="text-lg font-bold">R$ 29,90/mês</p>
           </div>
