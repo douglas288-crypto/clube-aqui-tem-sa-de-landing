@@ -180,12 +180,9 @@ function Hero() {
             </p>
           </div>
           <div className="mt-8 flex flex-wrap items-center gap-4">
-            <a
-              href="#adquirir"
-              className="rounded-full bg-gradient-accent px-7 py-4 text-base font-semibold text-accent-foreground shadow-accent transition hover:scale-[1.02] hover:brightness-110"
-            >
+            <CheckoutButton className="btn-cta rounded-full bg-gradient-accent px-7 py-4 text-base font-semibold text-accent-foreground shadow-accent">
               Quero adquirir o Clube
-            </a>
+            </CheckoutButton>
             <a
               href="#como-funciona"
               className="rounded-full border border-primary/20 bg-card px-7 py-4 text-base font-semibold text-primary shadow-soft transition hover:bg-secondary"
@@ -401,7 +398,7 @@ function Pricing() {
             </ul>
           </div>
           <div className="p-8 pt-0">
-            <CheckoutButton className="inline-flex w-full items-center justify-center rounded-full bg-accent px-6 py-4 text-base font-bold text-accent-foreground shadow-accent transition hover:brightness-110">
+            <CheckoutButton className="btn-cta inline-flex w-full items-center justify-center rounded-full bg-accent px-6 py-4 text-base font-bold text-accent-foreground shadow-accent">
               Adquirir o Clube
             </CheckoutButton>
             <p className="mt-3 text-center text-xs opacity-80">Pagamento recorrente no cartão</p>
@@ -503,7 +500,7 @@ function FinalCTA() {
             Telemedicina ilimitada com clínico geral e 11 especialidades por apenas{" "}
             <strong className="text-accent">R$ 29,90/mês</strong>.
           </p>
-          <CheckoutButton className="mt-8 inline-flex items-center justify-center rounded-full bg-accent px-8 py-4 text-base font-bold text-accent-foreground shadow-glow transition hover:scale-[1.02] hover:brightness-110">
+          <CheckoutButton className="btn-cta mt-8 inline-flex items-center justify-center rounded-full bg-accent px-8 py-4 text-base font-bold text-accent-foreground shadow-glow">
             Adquirir o Clube agora
           </CheckoutButton>
         </div>
