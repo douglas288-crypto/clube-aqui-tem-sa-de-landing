@@ -1,7 +1,7 @@
 import { createServerFn } from "@tanstack/react-start";
 import { getRequestHeader } from "@tanstack/react-start/server";
 
-const PRICE_ID = "price_1TssoqFdbD1oqfRzjvheYZF6";
+const PRICE_ID = "price_1TsswZFdbD1oqfRzyIYN8YJU";
 
 export const createCheckoutSession = createServerFn({ method: "POST" }).handler(
   async () => {
