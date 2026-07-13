@@ -18,7 +18,7 @@ export const createCheckoutSession = createServerFn({ method: "POST" }).handler(
     body.append("mode", "subscription");
     body.append("line_items[0][price]", PRICE_ID);
     body.append("line_items[0][quantity]", "1");
-    body.append("success_url", `${origin}/?checkout=success`);
+    body.append("success_url", `${origin}/sucesso?session_id={CHECKOUT_SESSION_ID}`);
     body.append("cancel_url", `${origin}/?checkout=cancel`);
     body.append("allow_promotion_codes", "true");
     body.append("billing_address_collection", "required");
