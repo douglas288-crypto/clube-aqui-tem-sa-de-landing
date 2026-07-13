@@ -541,3 +541,40 @@ function Footer() {
     </footer>
   );
 }
+
+function CheckoutButton({
+  children,
+  className,
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) {
+  const checkout = useServerFn(createCheckoutSession);
+  const [loading, setLoading] = useState(false);
+
+  const handleClick = async () => {
+    if (loading) return;
+    setLoading(true);
+    try {
+      const { url } = await checkout();
+      window.location.href = url;
+    } catch (err) {
+      console.error(err);
+      alert(
+        "Não foi possível iniciar o checkout no momento. Tente novamente em instantes.",
+      );
+      setLoading(false);
+    }
+  };
+
+  return (
+    <button
+      type="button"
+      onClick={handleClick}
+      disabled={loading}
+      className={className}
+    >
+      {loading ? "Processando..." : children}
+    </button>
+  );
+}
